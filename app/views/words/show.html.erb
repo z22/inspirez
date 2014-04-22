@@ -1,0 +1,27 @@
+<% @page_title = "Show Words" %>
+
+<%= link_to("<< Back to Words List", {:action => 'index'}, :class => 'back-link') %>
+
+<div class="words show">
+  <h2>Show Words</h2>
+
+  <table summary="Word detail view">
+    <tr>
+      <th>Content</th>
+      <td><%= @word.content %></td>
+    </tr>
+    <tr>
+      <th>Originator</th>
+      <td><%= @word.originator%></td>
+    </tr>
+    <tr>
+      <th>Category</th>
+      <td><%= @word.category%></td>
+    </tr>
+    <tr>
+      <th>Date Added</th>
+      <td><%= @word.created_at.to_s(:long_ordinal) %></td>
+    </tr>
+  </table>
+
+</div>

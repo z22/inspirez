@@ -1,0 +1,21 @@
+
+
+
+<% @page_title = "Edit Video" %>
+
+<%= link_to("<< Back to Video List", {:action => 'index'}, :class => 'back-link') %>
+
+<div class="videos edit">
+  <h2>Update Video</h2>
+
+  <%= form_for(:video, :url => {:action => 'update', :id => @video.id}) do |f| %>
+
+    <%= render(:partial => "form", :locals => {:f => f}) %>
+
+    <div class="form-buttons">
+      <%= submit_tag 'Cancel' %>
+      <%= submit_tag 'Update'%>
+    </div>
+
+  <% end %>
+</div>

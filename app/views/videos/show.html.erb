@@ -1,0 +1,65 @@
+<% @page_title = "Show Video" %>
+
+<%= link_to("<< Back to Video List", {:action => 'index'}, :class => 'back-link') %>
+
+<div class="videos show">
+  <h2>Show Video</h2>
+
+  <table summary="Video detail view">
+    <tr>
+      <th>Title</th>
+      <td><%= @video.title %></td>
+    </tr>
+    <tr>
+      <th>Originator</th>
+      <td><%= @video.originator %></td>
+    </tr>
+    <tr>
+      <th>URL</th>
+      <td><%= link_to 'Click Here', @video.url %></td>
+    </tr>
+    <tr>
+      <th>Category</th>
+      <td><%= @video.category %></td>
+    </tr>
+    <tr>
+      <th>Date Added</th>
+      <td><%= @video.created_at.to_s(:long_ordinal) %></td>
+    </tr>
+  </table>
+
+  <br>
+
+<!-- Embed a Youtube Video. Note: Replace /watch?v= with /v/ -->
+
+<!-- <object width="400" height="310">
+  <param name="movie" value="http://www.youtube.com/v/JeM65Kh-xM"</param>
+  <param name="allowFullScreen" value="true"></param>
+  <param name="allowScriptAccess" value="always"></param>
+  <embed src="http://www.youtube.com/v/JeM65Kh-xM"
+  type="application/x-shockwave-flash"
+  allowfullscreen="true"
+  allowscriptaccess="always"
+  width="400" height="310">
+  </embed>
+</object> -->
+
+<!-- Try the following code out -->
+<% n = @video.url.to_s.length %>
+<% key = @video.url.to_s.slice(32..n) %>
+<%# @test = @key.insert(23, '/v/') %>
+
+<object width="400" height="310">
+  <param name="movie" value="http://www.youtube.com/v/<%=key%>"</param>
+  <param name="allowFullScreen" value="true"></param>
+  <param name="allowScriptAccess" value="always"></param>
+  <embed src="http://www.youtube.com/v/<%=key%>"
+  type="application/x-shockwave-flash"
+  allowfullscreen="true"
+  allowscriptaccess="always"
+  width="400" height="310">
+  </embed>
+</object>
+
+
+</div>

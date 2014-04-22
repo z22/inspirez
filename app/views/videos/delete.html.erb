@@ -1,0 +1,20 @@
+<% @page_title = "Delete Video" %>
+
+<%= link_to("<< Back to Video List", {:action => 'index'}, :class => 'back-link') %>
+
+<div class="video delete">
+  <h2>Delete Video</h2>
+
+  <%= form_for(:video, :url => {:action => 'destroy', :id => @video.id}) do |f| %>
+
+    <p>Are you sure you want to permanently delete this?</p>
+
+    <p class="reference-name"><%= @video.title %></p>
+
+    <div class="form-buttons">
+      <%= submit_tag 'Cancel' %>
+      <%= submit_tag 'Delete' %>
+    </div>
+
+  <% end %>
+</div>

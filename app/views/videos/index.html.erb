@@ -1,0 +1,33 @@
+<% @page_title = "Videos" %>
+
+<div class="videos index">
+  <h2>Videos</h2>
+
+  <%= link_to(image_tag('plus_sign.png', :size => '11x11', :alt => '+') + " Add New Video", {:action => 'new'}, :class => 'action new') %>
+<br>
+<br>
+  <table class="listing" summary="Video list">
+    <tr class="header">
+      <!-- <th>&nbsp;</th> -->
+      <th>Title</th>
+      <th>Originator</th>
+      <th>Category</th>
+      <th>Link</th>
+      <th>&nbsp;</th>
+    </tr>
+    <% @videos.each do |video| %>
+    <tr class="<%= cycle('odd', 'even') %>">
+      <td><%= video.title %></td>
+      <td><%= video.originator %></td>
+      <td><%= video.category %></td>
+      <td><%= link_to 'Click Here', video.url %></td>
+      <td>&nbsp;</td>
+      <td class="actions">
+        <%= link_to("Show", video_path(video), method: :show) %>
+        <%= link_to("Edit", video_path(video), method: :edit) %>
+        <%= link_to("Delete", video_path(video), method: :delete) %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+</div>

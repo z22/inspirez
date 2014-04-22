@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>inspirez <%= " | #{@page_title} " if @page_title %></title>
+  <div class="site_header">
+    <%= link_to('Homepage', {:controller => 'home', :action => 'index'}) %>
+  </div>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+      <div class="navigation">
+        <%= render(:partial => 'layouts/navigation', :locals => {:videos => @videos, :words => @words}) %>
+      </div>
+
+<%= yield %>
+
+</body>
+</html>

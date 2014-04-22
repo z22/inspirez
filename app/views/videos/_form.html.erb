@@ -1,0 +1,22 @@
+<%= error_messages_for(@video) %>
+
+<table summary="Video form fields">
+  <tr>
+    <th><%= f.label(:title) %></th>
+    <td><%= f.text_field(:title) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:originator) %></th>
+    <td><%= f.text_field(:originator) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:url, "URL") %></th>
+    <td><%= f.text_field(:url) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:category) %></th>
+    <td><%= f.text_field(:category) %></td>
+  </tr>
+</table>
+
+

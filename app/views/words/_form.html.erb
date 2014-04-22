@@ -1,0 +1,18 @@
+<%= error_messages_for(@word) %>
+
+<table summary="Word form fields">
+  <tr>
+    <th><%= f.label(:content) %></th>
+    <td><%= f.text_area(:content) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:originator) %></th>
+    <td><%= f.text_field(:originator) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:category) %></th>
+    <td><%= f.text_field(:category) %></td>
+  </tr>
+</table>
+
+

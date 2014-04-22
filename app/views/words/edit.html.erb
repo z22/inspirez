@@ -1,0 +1,18 @@
+<% @page_title = "Edit Word" %>
+
+<%= link_to("<< Back to Word List", {:action => 'index'} :class => 'back-link') %>
+
+<div class="Words edit">
+  <h2>Update Words</h2>
+
+  <%= form_for(:word, :url => {:action => 'update', :id => @word.id}) do |f| %>
+
+    <%= render(:partial => "form", :locals => {:f => f}) %>
+
+    <div class="form-buttons">
+      <%= submit_tag 'Cancel' %>
+      <%= submit_tag 'Update'%>
+    </div>
+
+  <% end %>
+</div>
