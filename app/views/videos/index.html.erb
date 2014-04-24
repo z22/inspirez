@@ -1,4 +1,4 @@
-<% @page_title = "Videos" %>
+<!--<% @page_title = "Videos" %>
 
 <div class="videos index">
   <h2>Videos</h2>
@@ -8,7 +8,6 @@
 <br>
   <table class="listing" summary="Video list">
     <tr class="header">
-      <!-- <th>&nbsp;</th> -->
       <th>Title</th>
       <th>Originator</th>
       <th>Category</th>
@@ -30,4 +29,28 @@
     </tr>
     <% end %>
   </table>
+</div>
+-->
+
+
+<!-- Embed a Youtube Video. Note: Replace /watch?v= with /v/ -->
+<div class="video-container">
+<h2 class="randomvideo-header">"<%= @randomvideo.title %>" by <%=@randomvideo.originator %></h2>
+<div class="video-frame">
+  <object width="500" height="360">
+    <param name="movie" value="http://www.youtube.com/v/<%= @x %>"</param>
+    <param name="allowFullScreen" value="true"></param>
+    <param name="allowScriptAccess" value="always"></param>
+    <embed src="http://www.youtube.com/v/<%= @x %>"
+    type="application/x-shockwave-flash"
+    allowfullscreen="true"
+    allowscriptaccess="always"
+    width="500" height="360">
+    </embed>
+  </object>
+</div>
+
+<div class="add-video-button">
+  <%= link_to 'Add a Video', new_video_path %>
+</div>
 </div>

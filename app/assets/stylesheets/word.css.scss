@@ -11,9 +11,6 @@ table {
 }
 
 .words_index {
-  .randomwords {
-    font-family: Georgia;
-  }
 
   .words_table_headers {
     color: blue;
@@ -23,4 +20,11 @@ table {
   h2 {
     color: red;
   }
+}
+
+
+.quoth {
+  color: #fff;
+  padding-right: 25px;
+  line-height: 25px;
 }

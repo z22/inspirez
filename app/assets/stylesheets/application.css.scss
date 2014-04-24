@@ -12,38 +12,136 @@
  *= require_tree .
  */
 
-
-.site_header {
+/*.site_header {
   height: 5.5em;
   text-align: left;
   padding-left: 10px;
   background-image: url("test1.jpg");
   background-size: 100%;
   color: black;
+}*/
+
+
+@import url(http://fonts.googleapis.com/css?family=Poiret+One|Montez|Philosopher|Allura|Trochut|Oxygen:300|Lato:300,400|Titillium+Web|Open+Sans);
+
+.bg-overlay {
+  background-color: rgb(23,23,26);
+  opacity: 0.4;
+  height:100%;
+  width:100%;
+  position:fixed;
+  left:0;
+  top:0;
+  z-index:-11 !important;
 }
 
+html {
+  background: image-url('unsplash1.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  /*background-color: #eee;*/
+}
+
+body {
+  background-color: transparent !important;
+}
+
+.content-container {
+  position: relative;
+  height:100%;
+  width:100%;
+  position:fixed;
+}
+
+.content {
+  background: transparent;
+  color: #fff;
+  position: absolute;
+  top: 18%;
+  left: 45%;
+  font-family: Lato;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+
+.navig {
+  background: rgba(0, 0, 0, 0.2);
+  position: relative;
+  top: 0;
+  text-align: center;
+  padding-top: 55px;
+  color: #57C2F7;
+  /*font-family: Poiret One;*/
+  a:link {
+    text-decoration: none;
+    color: #57C2F7;
+  }
+  a:visited {
+    text-decoration: none;
+    color: #57C2F7;
+  }
+  a:hover {
+    text-decoration: none;
+    color: #ddd;
+  }
+  a:active {
+    text-decoration: none;
+    color: #7fc3e5;
+  }
+
+  .logo  {
+    font-size: 65px;
+    font-family: Philosopher;
+    a:hover {
+      color: #57C2F7;
+    }
+  }
+
+  .button {
+    font-family: Lato;
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-top: 50px;
+  }
+}
 
 .header h1 {
   margin: 0;
   padding: 0;
 }
 
-
-.navigation {
-  float: top;
-  height: 10px;
-  padding: 10px;
-  background: #94B26F;
-  color: #4C2516;
-  text-align: right;
-  text-decoration: none;
-}
-
-.navigation_links {
-  text-decoration: none;
-  font-size: 20px;
+.footer {
+  opacity: 0.7;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 30px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  padding-left: 20px;
+  font-family: Lato;
+  font-size: 12px;
+  color: #57C2F7;
+  a:link {
+    text-decoration: none;
+    color: #57C2F7;
   }
-
-.actions {
-  text-decoration: none;
+  a:visited {
+    text-decoration: none;
+    color: #57C2F7;
+  }
+  a:hover {
+    text-decoration: none;
+    color: #ddd;
+  }
+  a:active {
+    text-decoration: none;
+    color: #7fc3e5;
+  }
 }

@@ -1,3 +1,104 @@
 // Place all the styles related to the Video controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+h2.randomvideo-header {
+  font-size: 20px;
+  padding-bottom: 20px;
+  font-family: Lato;
+}
+
+
+.video-frame {
+  border: 3px solid #fff;
+  border-radius: 8px;
+  padding-top: 2px;
+}
+
+.video-container {
+  margin-left: 130px;
+  margin-top: -80px;
+}
+
+.new-video-form {
+  font-family: Lato;
+  margin-left: 280px;
+  margin-top: -80px;
+  h2 {
+    padding-bottom: 20px;
+    font-family: Lato;
+  }
+  th {
+    padding-right: 20px;
+  }
+  tr {
+    padding-bottom: 20px;
+  }
+}
+
+
+.form-button {
+  background-color:#57C2F7;
+  border-top-left-radius:5px;
+  border-top-left-radius:5px;
+  border-top-right-radius:5px;
+  border-top-right-radius:5px;
+  border-bottom-right-radius:5px;
+  border-bottom-right-radius:5px;
+  border-bottom-left-radius:5px;
+  border-bottom-left-radius:5px;
+  text-indent:0;
+  display:inline-block;
+  font-family: Lato;
+  font-size:13px;
+  font-weight:bold;
+  font-style:normal;
+  height:25px;
+  line-height:20px;
+  width:auto;
+  text-decoration:none;
+  text-align:center;
+  color: black;
+  margin-top: 20px;
+}
+
+.add-video-button {
+  background-color:#57C2F7;
+  border-top-left-radius:5px;
+  border-top-left-radius:5px;
+  border-top-right-radius:5px;
+  border-top-right-radius:5px;
+  border-bottom-right-radius:5px;
+  border-bottom-right-radius:5px;
+  border-bottom-left-radius:5px;
+  border-bottom-left-radius:5px;
+  text-indent:0;
+  display:inline-block;
+  font-family: Lato;
+  font-size:13px;
+  font-weight:bold;
+  font-style:normal;
+  height:30px;
+  line-height:30px;
+  width:100px;
+  text-decoration:none;
+  text-align:center;
+
+  margin-top: 20px;
+
+  a {
+    color: black;
+  }
+  a:hover {
+    text-decoration: none;
+    color: black;
+  }
+  a:active {
+    position:relative;
+    top:1px;
+  }
+}
+
+
+

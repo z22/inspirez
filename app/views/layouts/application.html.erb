@@ -1,21 +1,38 @@
 <!DOCTYPE html>
+
 <html>
 
 <head>
   <title>inspirez <%= " | #{@page_title} " if @page_title %></title>
-  <div class="site_header">
-    <%= link_to('Homepage', {:controller => 'home', :action => 'index'}) %>
-  </div>
+  <div class="site_header"></div>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-      <div class="navigation">
-        <%= render(:partial => 'layouts/navigation', :locals => {:videos => @videos, :words => @words}) %>
-      </div>
+<div class="bg-overlay"></div>
 
+<div class="navig">
+  <div class="logo"><%= link_to 'Inspirez', root_url %></div>
+  <div class="button"><%= link_to 'Quotes', words_path %></div>
+  <div class="button"><%= link_to "Videos", videos_path %></div>
+</div>
+
+     <!--  <div class="navigation">
+        <%= render(:partial => 'layouts/navigation', :locals => {:videos => @videos, :words => @words}) %>
+      </div> -->
+<div class="content-container">
+<div class="content">
 <%= yield %>
+</div>
+</div>
 
 </body>
+
+
+
+<div class="footer">
+  <p><%= link_to "Mel Zhang", "http://melzhang.herokuapp.com", target: "_blank" %> &copy;<%= Time.now.year%></p>
+</div>
+
 </html>

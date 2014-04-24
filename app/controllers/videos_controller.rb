@@ -3,7 +3,9 @@ class VideosController < ApplicationController
 
   def index
     @videos = Video.all.newest_first
-  end
+    @randomvideo = Video.random
+    @x = @randomvideo.url.reverse.chomp("=v?hctaw/moc.ebutuoy.www//:sptth").reverse
+end
 
   def show
     @video = Video.find(params[:id])

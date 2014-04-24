@@ -1,0 +1,33 @@
+/*
+  =require twitter-bootstrap-static/bootstrap
+
+  Use Font Awesome icons (default)
+  To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
+  =require twitter-bootstrap-static/fontawesome
+  */
+
+@import "twitter/bootstrap/bootstrap";
+
+/*body { padding-top: 80px; }*/
+
+@import "twitter/bootstrap/responsive";
+
+@import url(http://fonts.googleapis.com/css?family=Anton|Gafata|Convergence|Lato:100|Source+Sans+Pro:200:bold);
+
+
+
+
+.navbar {
+  background-color: transparent;
+  padding-top: 90px;
+}
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+

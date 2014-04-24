@@ -1,6 +1,7 @@
 class WordsController < ApplicationController
   layout 'application'
 
+
   def index
       @words = Word.all.newest_first
   end
