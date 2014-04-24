@@ -1,6 +1,6 @@
 class Video < ActiveRecord::Base
 
-  validates_format_of :url, :with => /^http:\/\/www\.youtube\.com\/watch\?v=([a-zA-Z0-9_-]*)/
+  validates_format_of :url, :with => /\Ahttp:\/\/www\.youtube\.com\/watch\?v=([a-zA-Z0-9_-]*)\z/
 
 
 # scopes
