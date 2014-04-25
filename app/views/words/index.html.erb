@@ -1,32 +1,4 @@
-<!--   <% @page_title = "Words" %>
 
-<div class="words_index">
-  <h2>Words</h2>
-
-  <%= link_to(image_tag('plus_sign.png', :size => '11x11', :alt => '+') + " Add New Words", {:action => 'new'}, :class => 'action new') %>
-<br>
-<br>
-  <table class="listing" summary="word list">
-    <tr class="words_table_headers">
-      <th>The Words</th>
-      <th>Originator</th>
-      <th>Category</th>
-      <th>&nbsp;</th>
-    </tr>
-    <% @words.each do |word| %>
-    <tr class="<%= cycle('odd', 'even') %>">
-      <td><%= word.content %></td>
-      <td><%= word.originator %></td>
-      <td><%= word.category %></td>
-      <td class="actions">
-        <%= link_to("Show", word_path(word), method: :show) %>
-        <%= link_to("Edit", word_path(word), method: :edit) %>
-        <%= link_to("Delete", word_path(word), method: :delete) %>
-      </td>
-    </tr>
-    <% end %>
-  </table>
-</div> -->
 
 
 <div class="quoth">
