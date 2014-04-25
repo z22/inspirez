@@ -35,7 +35,12 @@
 
 <!-- Embed a Youtube Video. Note: Replace /watch?v= with /v/ -->
 <div class="video-container">
-<h2 class="randomvideo-header">"<%= puts "Daft Punk (Cover) by Pentatonix" unless @randomvideo %><%= @randomvideo.title %>" by <%=@randomvideo.originator %></h2>
+  <% if @randomvideo %>
+    <h2 class="randomvideo-header">"<%= @randomvideo.title %>" by <%=@randomvideo.originator %></h2>
+  <% else %>
+    <%= puts "Daft Punk (Cover) by Pentatonix" unless @randomvideo %>
+  <% end %>
+
 <div class="video-frame">
   <object width="500" height="360">
     <param name="movie" value="http://www.youtube.com/v/<%= @x %>"</param>
