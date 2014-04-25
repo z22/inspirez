@@ -4,7 +4,7 @@ class HomeController < ApplicationController
 
   def index
    # @randomwords = Word.order("RANDOM()").limit(1)
-   @randomwords = Word.random
+   #@randomwords = Word.random
   end
 
 
