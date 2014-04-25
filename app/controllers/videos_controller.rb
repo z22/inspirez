@@ -2,7 +2,7 @@ class VideosController < ApplicationController
    layout 'application'
 
   def index
-    @videos = Video.all.newest_first
+    # @videos = Video.all.newest_first
     @randomvideo = Video.random
     if @randomvideo
       @x = @randomvideo.url.reverse.chomp("=v?hctaw/moc.ebutuoy.www//:sptth").reverse
