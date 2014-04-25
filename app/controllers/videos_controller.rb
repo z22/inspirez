@@ -3,12 +3,11 @@ class VideosController < ApplicationController
 
   def index
     # @videos = Video.all.newest_first
-    @randomvideo = Video.random
-    if @randomvideo
+    @randomvideo = Video.random rescue nil
+    if @randomvideo != nil
       @x = @randomvideo.url.reverse.chomp("=v?hctaw/moc.ebutuoy.www//:sptth").reverse
     else
       @x = "3MteSlpxCpo"
-
     end
 end
 
