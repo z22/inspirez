@@ -8,6 +8,7 @@ class VideosController < ApplicationController
       @x = @randomvideo.url.reverse.chomp("=v?hctaw/moc.ebutuoy.www//:sptth").reverse
     else
       @x = "3MteSlpxCpo"
+
     end
 end
 
