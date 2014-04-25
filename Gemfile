@@ -49,7 +49,7 @@ end
 
 # Retrieve random record(s) from database
 gem 'randumb'
-
+gem 'rails_12factor'
 gem 'rails_admin'
 gem 'paper_trail'
 gem 'cancan'
