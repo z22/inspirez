@@ -37,7 +37,7 @@ end
     @video = Video.find(params[:id])
     if @video.update_attributes(video_params)
       flash[:notice] = "Update Success!"
-      redirect_to(:action => 'show', :id => @video.id)
+      redirect_to(:action => 'index')
     else
       render('edit')
     end
