@@ -22,7 +22,7 @@ end
   def create
     @video = Video.new(video_params)
     if @video.save
-      flash[:notice] = "Update Success!"
+      flash[:notice] = "Creation Success!"
       redirect_to(:action => 'index')
     else
       render('new')
@@ -37,7 +37,7 @@ end
     @video = Video.find(params[:id])
     if @video.update_attributes(video_params)
       flash[:notice] = "Update Success!"
-      redirect_to(:action => 'index')
+      redirect_to(:action => 'show', :id => @video.id)
     else
       render('edit')
     end

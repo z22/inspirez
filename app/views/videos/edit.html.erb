@@ -8,7 +8,10 @@
 <div class="videos edit">
   <h2>Update Video</h2>
 
-  <%= form_for(:video, :url => {:action => 'update', :id => @video.id}) do |f| %>
+
+
+  <!--Stack overflow advice for solving POST routing error during update (advice was to use PUT instead, which is encompassed in the following use of form_for): -->
+  <%= form_for @video do |f| %>
 
     <%= render(:partial => "form", :locals => {:f => f}) %>
 
