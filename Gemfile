@@ -59,4 +59,5 @@ gem 'less-rails'
 gem 'therubyracer'
 gem 'twitter-bootstrap-rails'
 gem 'guard-livereload'
-gem 'quoth'
+gem 'quoth' #random quote generator
+gem 'figaro'

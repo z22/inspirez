@@ -9,4 +9,5 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Inspirez::Application.config.secret_key_base = 'f052060f0cb13472284613775ca807945ba179bf151ddda0c2e5c7a8637c0393e24f989e4c0b88864815bd9b335e593b1059765b78d97481de6f641a12a2f634'
+Inspirez::Application.config.secret_key_base = ENV['SECRET_TOKEN']
+
