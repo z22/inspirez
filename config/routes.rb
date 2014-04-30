@@ -1,5 +1,6 @@
 Inspirez::Application.routes.draw do
 
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get "static_pages/help"
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
