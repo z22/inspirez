@@ -31,4 +31,18 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+
+
+  # Without Devise: https://gist.github.com/grosser/1278355
+  RailsAdmin.config do |config|
+  config.authorize_with do
+    authenticate_or_request_with_http_basic('Site Message') do |username, password|
+      username == 'foo' && password == 'bar'
+    end
+  end
+
+  config.main_app_name { ['inspirez', 'Admin'] }
+  end
+
+
 end
